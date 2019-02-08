@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Change Style</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Link Bootstarp Css -->
+	<link rel="stylesheet" type="text/css" href="asset/css/bootstrap.min.css">
+	<!-- Link Bootstrap Js -->
+	<script src="asset/js/jquery.min.js"></script>
+	<script src="asset/js/popper.min.js"></script>
+	<script src="asset/js/bootstrap.js"></script>
+	<script type="text/javascript">
+		function editStyle(){
+			//mengambil nilai dari get value
+			var panjang = document.getElementById('panjang').value;
+			var lebar = document.getElementById('lebar').value;
+			var warna = document.getElementById('warna').value;
+			
+			//edit style
+			document.getElementById('square').style.width = panjang+"%";
+			document.getElementById('square').style.height = lebar+"%";
+			document.getElementById('square').style.backgroundColor = warna;
+		}
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="card col-sm-4">
+			<div class="card-header">
+				<h4>Luas Persegi Panjang</h4>
+			</div>
+			<div class="card-body">
+				Width (percentage)
+				<input type="number" class="form-control" id="panjang">
+				Height (percentage)
+				<input type="number" class="form-control" id="lebar">
+				Background
+				<input type="color" id="warna" class="form-control">
+				<button class="btn btn-success btn-block" onclick="editStyle();">
+					Set
+				</button>
+			</div>
+		</div>
+
+		<div class="card col-sm-8">
+			<div class="card-header">
+				Result
+			</div>
+			<div class="card-body">
+				<div id="square"></div>
+			</div>
+		</div>
+		</div>
+	</div>
+</body>
+</html>

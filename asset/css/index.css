@@ -1,0 +1,30 @@
+*{
+	box-sizing: border-box;
+	font-family: Bahnschrift, sans-serif;
+}
+
+body{
+	display:table;
+	width:100%;
+	height:auto;
+	background-image:radial-gradient(circle at 50% 50%,rgba(0,0,0,0.46),rgba(0,0,0,0.88)),url('../bg.jpg');
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	background-size:cover;
+	-o-background-size:cover;
+}
+
+.badan{
+	/*width: 450px;*/
+	height: auto;
+	margin-top: 100px;
+	margin-left: 460px;
+	padding: 20px;
+}
+.left{
+	float: left;
+}
+
+.right{
+	float: right;
+}

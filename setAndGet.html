@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Set and Get</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Link Bootstarp Css -->
+	<link rel="stylesheet" type="text/css" href="asset/css/bootstrap.min.css">
+	<!-- Link Bootstrap Js -->
+	<script src="asset/js/jquery.min.js"></script>
+	<script src="asset/js/popper.min.js"></script>
+	<script src="asset/js/bootstrap.js"></script>
+	<script type="text/javascript">
+		function hitung(){
+			//mengambil nilai dari get value
+			var panjang = document.getElementById('panjang').value;
+			var lebar = document.getElementById('lebar').value;
+			var hasil = panjang * lebar;
+			//menentukan nilai pd element set value
+			document.getElementById('hasil').value = hasil; 
+		}
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="card col-sm-4">
+			<div class="card-header">
+				<h4>Luas Persegi Panjang</h4>
+			</div>
+			<div class="card-body">
+				Panjang
+				<input type="number" class="form-control" id="panjang">
+				Lebar
+				<input type="number" class="form-control" id="lebar">
+				<button class="btn btn-info btn-block" onclick="hitung();">
+					Hitung
+				</button>
+				Hasil
+				<input type="number" class="form-control" id="hasil" readonly>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
